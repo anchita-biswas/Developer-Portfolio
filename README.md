@@ -4,11 +4,6 @@
 
 \---
 
-## 🖥️ Live Preview
-
-Coming soon — deploy on [GitHub Pages](https://pages.github.com/) or [Netlify](https://netlify.com) for a live link.
-
-\---
 
 ## 👤 About
 
