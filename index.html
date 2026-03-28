@@ -3,240 +3,268 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anchita — Full Stack Developer</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Anchita Biswas — Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="nav-bar">
-      <a class="navbarHeading" href="" id="text">👋 Hey there!</a>
-      <div class="iconSectionsContainer">
-        <a href="https://github.com/anchita-biswas" target="_blank">
-          <i class="fa-brands fa-github"></i>
-          <span>Github</span>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/anchita-biswas-22046a206"
-          target="_blank"
-        >
-          <i class="fa-brands fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="mailto:anchitabiswas02@gmail.com" class="emailBtn">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </div>
-    </div>
 
-    <div class="intro-section">
-      <div class="intro-section-content">
-        <h2>I'm Anchita Biswas</h2>
-        <p>
-          Aspiring Full Stack Developer with hands-on experience in building
-          responsive web applications using HTML, CSS, JavaScript, and React.
-          Strong foundation in problem-solving, API integration, and UI
-          development. Backed by 1.5 years of professional experience in
-          large-scale project coordination, bringing strong ownership,
-          communication, and execution skills. Seeking an entry-level full stack
-          developer role.
-        </p>
-        <div class="links">
-          <a href="#skills">
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="#" class="nav-logo">AB<span class="nav-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="/cdn-cgi/l/email-protection#2c4d424f4445584d4e455f5b4d5f1c1e6c4b414d4540024f4341" class="nav-cta">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <button class="nav-mobile-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+      <div class="nav-mobile-menu" id="mobileMenu">
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Work</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+        <a href="/cdn-cgi/l/email-protection#fb9a959893928f9a9992888c9a88cbc9bb9c969a9297d5989496" onclick="toggleMenu()">Hire me</a>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag"><span class="tag-dot"></span> Open to opportunities</div>
+          <h1 class="hero-heading">
+            <span class="hero-line">Anchita</span>
+            <span class="hero-line hero-line-accent">Biswas<span class="hero-period">.</span></span>
+          </h1>
+          <p class="hero-sub">Full Stack Developer — I build responsive web apps that are fast, accessible, and delightful to use.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">See my work <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#contact" class="btn-ghost">Get in touch</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/anchita-biswas" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anchita-biswas-22046a206" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="/cdn-cgi/l/email-protection#573639343f3e2336353e24203624676517303a363e3b7934383a" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <div class="hero-img-ring"></div>
+          <div class="hero-img-card">
+            <img src="Images/Display picture.png" alt="Anchita Biswas" />
+          </div>
+          <div class="hero-badge hero-badge-1">
             <i class="fa-solid fa-code"></i>
-            <span>Skills</span>
-          </a>
-          <a href="#projects">
-            <i class="fa-solid fa-folder-open"></i>
-            <span>Projects</span>
-          </a>
-          <a href="#contact">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Contact</span>
-          </a>
+            <span>Full Stack</span>
+          </div>
+          <div class="hero-badge hero-badge-2">
+            <i class="fa-brands fa-react"></i>
+            <span>React · Node</span>
+          </div>
         </div>
       </div>
-      <div class="profile-img">
-        <img src="Images/Display picture.png" alt="Anchita" />
+      <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
       </div>
-    </div>
+    </section>
 
-    <div class="skill-section" id="skills">
-      <h2>Skills</h2>
-      <p>
-        A toolkit built through real projects and consistent practice — from
-        structuring pages to building full-stack applications.
-      </p>
-      <div class="dev-skills-container">
-        <div class="cells">
-          <img src="Images/html.png" alt="HTML" />
-          <span>HTML</span>
-        </div>
-        <div class="cells">
-          <img src="Images/css.png" alt="CSS" />
-          <span>CSS</span>
-        </div>
-        <div class="cells">
-          <img src="Images/javascript.png" alt="JavaScript" />
-          <span>JavaScript</span>
-        </div>
-        <div class="cells">
-          <img src="Images/node js.png" alt="Node.js" />
-          <span>Node.js</span>
-        </div>
-        <div class="cells">
-          <img src="Images/react js.webp" alt="React.js" />
-          <span>React.js</span>
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="skills-inner">
+        <div class="section-label">// what I work with</div>
+        <h2 class="section-heading">Skills &amp; <em>Tools</em></h2>
+        <p class="section-sub">A toolkit built through real projects and consistent practice — from structuring pages to building full-stack applications.</p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><img src="Images/html.png" alt="HTML" /></div>
+            <span>HTML</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><img src="Images/css.png" alt="CSS" /></div>
+            <span>CSS</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><img src="Images/javascript.png" alt="JavaScript" /></div>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><img src="Images/node js.png" alt="Node.js" /></div>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><img src="Images/react js.webp" alt="React.js" /></div>
+            <span>React.js</span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Projects Section -->
-    <div class="projects-section" id="projects">
-      <h2>Projects</h2>
-      <p>A couple of things I've built. More coming soon.</p>
-      <div class="projects-container">
-        <a
-          href="https://anchita-biswas.github.io/Blipkart/"
-          class="project-card"
-          target="_blank"
-        >
-          <div class="project-overlay">
-            <div class="project-info">
-              <h3>Project One</h3>
-              <p>
-                Blipkart - An e-commerce website for sports gear and much much
-                more. Click to visit live site.
-              </p>
-              <span class="project-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
-                Live</span
-              >
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="projects-inner">
+        <div class="section-label">// things I've built</div>
+        <h2 class="section-heading">Selected <em>Work</em></h2>
+        <p class="section-sub">A couple of things I've built. More coming soon.</p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Blipkart -->
+          <a href="https://anchita-biswas.github.io/Blipkart/" target="_blank" class="project-card">
+            <div class="project-screen">
+              <!--
+                TO ADD YOUR SCREENSHOT:
+                Replace the <div class="project-img-placeholder"> block below with:
+                <img src="Images/Blipkart.png" alt="Blipkart screenshot" />
+              -->
+              <!--<div class="project-img-placeholder">
+                <i class="fa-solid fa-image"></i>
+                <p>Add screenshot here</p>
+                <code>Images/Blipkart.png</code>
+              </div>-->
+              <img src="Images/Blipkart.png" alt="">
             </div>
-          </div>
-          <div class="project-placeholder">
-            <i class="fa-solid fa-code"></i>
-            <span
-              >Stylish sportswear shopping with seamless online experience</span
-            >
-          </div>
-        </a>
-        <a
-          href="https://anchita-biswas.github.io/TinDog_Dating-Website/"
-          class="project-card"
-          target="_blank"
-        >
-          <div class="project-overlay">
-            <div class="project-info">
-              <h3>Project Two</h3>
-              <p>
-                TinDog - The Dating Website For Dogs. Click to visit live site.
-              </p>
-              <span class="project-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i> View
-                Live</span
-              >
+            <div class="project-body">
+              <div class="project-tags">
+                <span>E-Commerce</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+              </div>
+              <h3>Blipkart</h3>
+              <p>A full-featured e-commerce platform for sports gear — product listings, cart, auth flow, and responsive design throughout.</p>
+              <div class="project-cta">
+                View live site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
             </div>
-          </div>
-          <div class="project-placeholder">
-            <i class="fa-solid fa-laptop-code"></i>
-            <span>A dating website with a twist.</span>
-          </div>
-        </a>
-      </div>
-    </div>
+          </a>
 
-    <!-- Contact Section -->
-    <div class="contact-section" id="contact">
-      <h2>Contacts</h2>
-      <div class="contact-content-container">
-        <div class="contact-text-content">
-          <p>
-            I'm actively looking for full stack developer opportunities. Whether
-            you have a role in mind, a project to collaborate on, or just want
-            to say hello — my inbox is always open.
-          </p>
-          <div class="contact-socials">
-            <a
-              href="https://www.linkedin.com/in/anchita-biswas-22046a206"
-              target="_blank"
-              class="social-link"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/anchita-biswas"
-              target="_blank"
-              class="social-link"
-            >
-              <i class="fa-brands fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="mailto:anchitabiswas02@gmail.com" class="social-link">
-              <i class="fa-solid fa-envelope"></i>
-              <span>anchitabiswas02@gmail.com</span>
-            </a>
-            <a>
-              <i class="fa-solid fa-phone"></i>
-              <span>+91 9831914329</span>
-            </a>
-          </div>
-        </div>
-        <div class="contact-form-content">
-          <span>Name</span>
-          <input type="text" placeholder="Your name" />
-          <span>Email</span>
-          <input type="email" placeholder="your@email.com" />
-          <span>Message</span>
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="What's on your mind?"
-          ></textarea>
-          <div class="sendButton">
-            <button>Send Message</button>
-          </div>
+          <!-- Project 2: TinDog -->
+          <a href="https://anchita-biswas.github.io/TinDog_Dating-Website/" target="_blank" class="project-card">
+            <div class="project-screen">
+              <!--
+                TO ADD YOUR SCREENSHOT:
+                Replace the <div class="project-img-placeholder"> block below with:
+                <img src="Images/TinDog.png" alt="TinDog screenshot" />
+              -->
+              <div class="project-img-placeholder">
+                <!-- <img src="Images/Blipkart.png" alt=""> -->
+                <i class="fa-solid fa-image"></i>
+                <p>Add screenshot here</p>
+                <code>Images/TinDog.png</code>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Landing Page</span>
+                <span>Bootstrap</span>
+                <span>HTML</span>
+              </div>
+              <h3>TinDog</h3>
+              <p>The dating website for dogs. A fun, responsive landing page — clean layout, playful copy, and smooth UX.</p>
+              <div class="project-cta">
+                View live site <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+            </div>
+          </a>
+
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="section-label">// let's connect</div>
+        <h2 class="section-heading">Get in <em>Touch</em></h2>
+        <p class="section-sub">I'm actively looking for full stack developer opportunities. Whether you have a role, a project, or just want to say hello — my inbox is always open.</p>
+
+        <div class="contact-grid">
+          <div class="contact-left">
+            <a href="https://www.linkedin.com/in/anchita-biswas-22046a206" target="_blank" class="social-row">
+              <div class="social-icon-wrap"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="social-info"><span class="social-name">LinkedIn</span><span class="social-handle">anchita-biswas</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+            </a>
+            <a href="https://github.com/anchita-biswas" target="_blank" class="social-row">
+              <div class="social-icon-wrap"><i class="fa-brands fa-github"></i></div>
+              <div class="social-info"><span class="social-name">GitHub</span><span class="social-handle">anchita-biswas</span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+            </a>
+            <a href="/cdn-cgi/l/email-protection#caaba4a9a2a3beaba8a3b9bdabb9faf88aada7aba3a6e4a9a5a7" class="social-row">
+              <div class="social-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+              <div class="social-info"><span class="social-name">Email</span><span class="social-handle"><span class="__cf_email__" data-cfemail="4f2e212c27263b2e2d263c382e3c7f7d0f28222e2623612c2022">[email&#160;protected]</span></span></div>
+              <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+            </a>
+            <a href="tel:+919831914329" class="social-row">
+              <div class="social-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+              <div class="social-info"><span class="social-name">Phone</span><span class="social-handle">+91 9831 914 329</span></div>
+              <!-- <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i> -->
+            </a>
+          </div>
+
+          <form class="contact-form" onsubmit="handleForm(event)">
+            <div class="form-field">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-field">
+              <label>Message</label>
+              <textarea rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-success" id="formSuccess">Thanks! I'll get back to you soon ✓</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-      <div class="footer-content">
-        <p class="footer-name">Anchita Biswas</p>
-        <p class="footer-tagline">
-          Full Stack Developer · Open to Opportunities
-        </p>
-        <div class="footer-socials">
-          <a href="https://github.com/anchita-biswas" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/anchita-biswas-22046a206"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a href="mailto:anchitabiswas02@gmail.com"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-          <a href="tel:+91 9831914329"><i class="fa-solid fa-phone"></i></a>
-        </div>
-        <p class="footer-copy">© 2026 Anchita. Designed & Built with ❤️</p>
+      <div class="footer-inner">
+        <p class="footer-name">Anchita<span>.</span></p>
+        <p class="footer-copy">© 2026 Anchita Biswas — Designed &amp; Built with ❤️</p>
       </div>
     </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      function toggleMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+      }
+      function handleForm(e) {
+        e.preventDefault();
+        const s = document.getElementById('formSuccess');
+        s.classList.add('visible');
+        e.target.reset();
+        setTimeout(() => s.classList.remove('visible'), 4000);
+      }
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('revealed'); });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.skill-card, .project-card, .social-rowdocument.querySelectorAll('.skill-card, .project-card, .social-row, .form-field').forEach((el, i) => {
+        el.classList.add('reveal');
+        observer.observe(el);
+      });
+      document.querySelectorAll('.skill-card').forEach((el, i) => {
+        el.style.transitionDelay = `${300 + i * 80}ms`;
+      });
+      document.querySelectorAll('.project-card').forEach((el, i) => {
+        el.style.transitionDelay = `${300 + i * 100}ms`;
+      });
+      document.querySelectorAll('.social-row').forEach((el, i) => {
+        el.style.transitionDelay = `${300 + i * 70}ms`;
+      });
+      document.querySelectorAll('.form-field').forEach((el, i) => {
+        el.style.transitionDelay = `${300 + i * 70}ms`;
+      });
+    </script>
   </body>
 </html>
