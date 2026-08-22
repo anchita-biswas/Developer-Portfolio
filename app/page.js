@@ -1,45 +1,61 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const EMAIL = 'anchitabiswas02@gmail.com';
+const EMAIL = "anchitabiswas02@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;
-const GITHUB = 'https://github.com/anchita-biswas';
-const LINKEDIN = 'https://www.linkedin.com/in/anchita-biswas-22046a206';
+const GITHUB = "https://github.com/anchita-biswas";
+const LINKEDIN = "https://www.linkedin.com/in/anchita-biswas-22046a206";
 
 const SKILLS = [
-  { name: 'HTML', img: 'html.png' },
-  { name: 'CSS', img: 'css.png' },
-  { name: 'JavaScript', img: 'javascript.png' },
-  { name: 'Node.js', img: 'node js.png' },
-  { name: 'React.js', img: 'react js.png' },
+  { name: "HTML", img: "html.png" },
+  { name: "CSS", img: "css.png" },
+  { name: "JavaScript", img: "javascript.png" },
+  { name: "Node.js", img: "node js.png" },
+  { name: "React.js", img: "react js.png" },
 ];
 
 const PROJECTS = [
   {
-    href: 'https://anchita-biswas.github.io/Blipkart/',
-    img: 'Blipkart.png',
-    alt: 'Blipkart Landing page',
-    tags: ['E-Commerce', 'JavaScript', 'CSS'],
-    title: 'Blipkart',
-    body: 'A full-featured e-commerce platform for sports gear — product listings, cart, auth flow, and responsive design throughout.',
+    href: "https://eventora-88bu.onrender.com",
+    img: "Eventora.png",
+    alt: "Eventora Landing page",
+    tags: ["Event Booking", "React", "Express", "MongoDB"],
+    title: "Eventora",
+    body: "A modern event booking platform — browse and book events end to end, with a React (Vite) client and an Express + MongoDB backend.",
   },
   {
-    href: 'https://anchita-biswas.github.io/TinDog_Dating-Website/',
-    img: 'TinDog.png',
-    alt: 'TinDog Landing page',
-    tags: ['Landing Page', 'Bootstrap', 'HTML'],
-    title: 'TinDog',
-    body: 'The dating website for dogs. A fun, responsive landing page — clean layout, playful copy, and smooth UX.',
+    href: "https://interviewprep-ai-hazx.onrender.com/",
+    img: "Interview-prep-AI.png",
+    alt: "Interview-prep-AI Landing page",
+    tags: ["AI Platform", "Gemini AI", "React", "Node.js"],
+    title: "Interview Prep AI",
+    body: "Paste a job description, upload your resume, and get a match score, tailored questions, skill gaps, and a day-by-day prep roadmap.",
+  },
+  {
+    href: "https://anchita-biswas.github.io/Blipkart/",
+    img: "Blipkart.png",
+    alt: "Blipkart Landing page",
+    tags: ["E-Commerce", "JavaScript", "CSS"],
+    title: "Blipkart",
+    body: "A full-featured e-commerce platform for sports gear — product listings, cart, auth flow, and responsive design throughout.",
+  },
+  {
+    href: "https://anchita-biswas.github.io/TinDog_Dating-Website/",
+    img: "TinDog.png",
+    alt: "TinDog Landing page",
+    tags: ["Landing Page", "Bootstrap", "HTML"],
+    title: "TinDog",
+    body: "The dating website for dogs. A fun, responsive landing page — clean layout, playful copy, and smooth UX.",
   },
 ];
 
 // Staggered scroll-reveal: [selector, delay step in ms] — matches the original design.
 const REVEAL_GROUPS = [
-  ['.skill-card', 80],
-  ['.project-card', 100],
-  ['.social-row', 70],
-  ['.form-field', 70],
+  [".skill-card", 80],
+  [".project-card", 100],
+  [".social-row", 70],
+  [".form-field", 70],
 ];
 
 export default function Home() {
@@ -50,14 +66,14 @@ export default function Home() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((el) => {
-          if (el.isIntersecting) el.target.classList.add('revealed');
+          if (el.isIntersecting) el.target.classList.add("revealed");
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
     REVEAL_GROUPS.forEach(([selector, step]) => {
       document.querySelectorAll(selector).forEach((el, i) => {
-        el.classList.add('reveal');
+        el.classList.add("reveal");
         el.style.transitionDelay = `${300 + i * step}ms`;
         observer.observe(el);
       });
@@ -102,7 +118,10 @@ export default function Home() {
         >
           <i className="fa-solid fa-bars"></i>
         </button>
-        <div className={`nav-mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu">
+        <div
+          className={`nav-mobile-menu${menuOpen ? " open" : ""}`}
+          id="mobileMenu"
+        >
           <a href="#skills" onClick={closeMenu}>
             Skills
           </a>
@@ -149,7 +168,12 @@ export default function Home() {
               <a href={GITHUB} target="_blank" rel="noreferrer" title="GitHub">
                 <i className="fa-brands fa-github"></i>
               </a>
-              <a href={LINKEDIN} target="_blank" rel="noreferrer" title="LinkedIn">
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                title="LinkedIn"
+              >
                 <i className="fa-brands fa-linkedin"></i>
               </a>
               <a href={MAILTO} title="Email">
@@ -209,7 +233,9 @@ export default function Home() {
           <h2 className="section-heading">
             Selected <em>Work</em>
           </h2>
-          <p className="section-sub">A couple of things I&apos;ve built. More coming soon.</p>
+          <p className="section-sub">
+            A couple of things I&apos;ve built. More coming soon.
+          </p>
 
           <div className="projects-grid">
             {PROJECTS.map((p) => (
@@ -250,13 +276,19 @@ export default function Home() {
             Get in <em>Touch</em>
           </h2>
           <p className="section-sub">
-            I&apos;m actively looking for full stack developer opportunities. Whether you
-            have a role, a project, or just want to say hello — my inbox is always open.
+            I&apos;m actively looking for full stack developer opportunities.
+            Whether you have a role, a project, or just want to say hello — my
+            inbox is always open.
           </p>
 
           <div className="contact-grid">
             <div className="contact-left">
-              <a href={LINKEDIN} target="_blank" rel="noreferrer" className="social-row">
+              <a
+                href={LINKEDIN}
+                target="_blank"
+                rel="noreferrer"
+                className="social-row"
+              >
                 <div className="social-icon-wrap">
                   <i className="fa-brands fa-linkedin"></i>
                 </div>
@@ -266,7 +298,12 @@ export default function Home() {
                 </div>
                 <i className="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
               </a>
-              <a href={GITHUB} target="_blank" rel="noreferrer" className="social-row">
+              <a
+                href={GITHUB}
+                target="_blank"
+                rel="noreferrer"
+                className="social-row"
+              >
                 <div className="social-icon-wrap">
                   <i className="fa-brands fa-github"></i>
                 </div>
@@ -300,7 +337,13 @@ export default function Home() {
             <form className="contact-form" onSubmit={handleForm}>
               <div className="form-field">
                 <label htmlFor="cf-name">Name</label>
-                <input id="cf-name" name="name" type="text" placeholder="Your name" required />
+                <input
+                  id="cf-name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                />
               </div>
               <div className="form-field">
                 <label htmlFor="cf-email">Email</label>
@@ -325,7 +368,10 @@ export default function Home() {
               <button type="submit" className="btn-primary form-submit">
                 Send Message <i className="fa-solid fa-paper-plane"></i>
               </button>
-              <p className={`form-success${sent ? ' visible' : ''}`} id="formSuccess">
+              <p
+                className={`form-success${sent ? " visible" : ""}`}
+                id="formSuccess"
+              >
                 Thanks! I&apos;ll get back to you soon ✓
               </p>
             </form>
@@ -339,7 +385,9 @@ export default function Home() {
           <p className="footer-name">
             Anchita<span>.</span>
           </p>
-          <p className="footer-copy">© 2026 Anchita Biswas — Designed &amp; Built with ❤️</p>
+          <p className="footer-copy">
+            © 2026 Anchita Biswas — Designed &amp; Built with ❤️
+          </p>
         </div>
       </footer>
     </>

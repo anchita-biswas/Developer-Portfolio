@@ -22,7 +22,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      {/* Extensions like Grammarly inject attributes into <body> before React
+          hydrates, which trips the hydration check. */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
