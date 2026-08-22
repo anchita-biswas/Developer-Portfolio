@@ -1,6 +1,6 @@
 # 💼 Anchita's Developer Portfolio
 
-> \*A clean, responsive personal portfolio showcasing my skills, projects, and contact details — built from scratch with HTML \& CSS.\*
+> \*A clean, responsive personal portfolio showcasing my skills, projects, and contact details — built with Next.js.\*
 
 \---
 
@@ -28,12 +28,13 @@ This is my personal developer portfolio website, designed to introduce myself as
 
 |Technology|Purpose|
 |-|-|
-|HTML5|Page structure|
+|Next.js 16|App Router, static rendering, dev server|
+|React 19|Component structure and UI state|
 |CSS3|Styling, layout, animations, responsive design|
 |Font Awesome 6|Icons throughout the page|
-|Google Fonts|Poppins + Montserrat typography|
+|Google Fonts|Outfit + Figtree typography|
 
-> No frameworks, no build tools — pure HTML \& CSS.
+> Single static page — no database, no API routes.
 
 \---
 
@@ -41,15 +42,21 @@ This is my personal developer portfolio website, designed to introduce myself as
 
 ```
 portfolio/
-├── index.html
-├── index.css
-└── Images/
-    ├── dp anime.png
-    ├── html.png
-    ├── css.png
-    ├── javascript.png
-    ├── node js.png
-    └── react js.webp
+├── app/
+│   ├── layout.js      # html shell, metadata, font + icon links
+│   ├── page.js        # the whole page (client component)
+│   └── globals.css    # all styling
+├── public/
+│   └── Images/
+│       ├── Display picture.png
+│       ├── html.png
+│       ├── css.png
+│       ├── javascript.png
+│       ├── node js.png
+│       ├── react js.png
+│       ├── Blipkart.png
+│       └── TinDog.png
+└── package.json
 ```
 
 \---
@@ -58,25 +65,40 @@ portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/anchita-biswas/Developer-Portfolio.git
 
 # Navigate into the project
-cd portfolio
+cd Developer-Portfolio
 
-# Open in your browser
-open index.html
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
 
-No installs, no dependencies — just open and go.
+Then open `http://localhost:3000`.
+
+Production build:
+
+```bash
+npm run build
+npm start
+```
 
 \---
 
-## 🌐 Deploying on GitHub Pages
+## 🌐 Deploying
 
-1. Push the project to a GitHub repository
-2. Go to **Settings → Pages**
-3. Under **Source**, select `main` branch and `/ (root)`
-4. Hit **Save** — your site will be live at `https://your-username.github.io/portfolio/`
+**Vercel** — import the repo at [vercel.com/new](https://vercel.com/new); Next.js is detected automatically, no configuration needed.
+
+**GitHub Pages** — needs a static export. Add to `next.config.mjs`:
+
+```js
+export default { output: 'export', images: { unoptimized: true } };
+```
+
+Then `npm run build` writes a deployable `out/` folder.
 
 \---
 
@@ -92,7 +114,7 @@ The layout is fully responsive across all screen sizes:
 
 ## 🎨 Design Highlights
 
-* **Color palette** — light background `#eeeff1` with a vibrant blue accent `#4a76f7`
+* **Color palette** — deep blue-black background `#06090f` with a vibrant blue accent `#3d6ff5`
 * **Project cards** — dark overlay slides in on hover, revealing the project title and a "View Live" button
 * **Skill cards** — lift and glow on hover with a blue border transition
 * **Contact socials** — slide-right animation on hover for each social link tile
@@ -104,11 +126,14 @@ The layout is fully responsive across all screen sizes:
 
 To make this your own:
 
-* **Hero bio** — update the `<p>` text inside `.intro-section-content` in `index.html`
-* **Profile image** — replace `Images/dp anime.png` with your own photo
-* **Projects** — swap the `href="#"` on each `.project-card` with your live project URLs, and update the `<h3>` and `<p>` inside `.project-info`
-* **Contact links** — update the `href` values in `.contact-socials` and the footer with your real LinkedIn, GitHub, email, and phone number
-* **Navbar links** — update the GitHub and LinkedIn `href` attributes in the navbar
+Everything lives in `app/page.js`:
+
+* **Contact links** — the `EMAIL`, `GITHUB`, and `LINKEDIN` constants at the top of the file
+* **Skills** — the `SKILLS` array; add an entry and drop the matching icon in `public/Images/`
+* **Projects** — the `PROJECTS` array (live URL, screenshot, tags, title, description)
+* **Hero bio** — the `.hero-sub` paragraph
+* **Profile image** — replace `public/Images/Display picture.png` with your own photo
+* **Colors** — the CSS variables in `:root` at the top of `app/globals.css`
 
 \---
 
