@@ -2,17 +2,25 @@
 
 import { useEffect, useState } from "react";
 
-const EMAIL = "anchitabiswas02@gmail.com";
+const EMAIL = "anchitabiswas08@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;
 const GITHUB = "https://github.com/anchita-biswas";
 const LINKEDIN = "https://www.linkedin.com/in/anchita-biswas-22046a206";
 
+// MERN stack first, then fundamentals and styling, then tooling.
 const SKILLS = [
+  { name: "MongoDB", img: "mongodb.svg" },
+  { name: "Express.js", img: "express.svg" },
+  { name: "React.js", img: "react js.png" },
+  { name: "Node.js", img: "node js.png" },
+  { name: "JavaScript", img: "javascript.png" },
   { name: "HTML", img: "html.png" },
   { name: "CSS", img: "css.png" },
-  { name: "JavaScript", img: "javascript.png" },
-  { name: "Node.js", img: "node js.png" },
-  { name: "React.js", img: "react js.png" },
+  { name: "Sass", img: "sass.svg" },
+  { name: "Tailwind CSS", img: "tailwindcss.svg" },
+  { name: "Vite", img: "vite.svg" },
+  { name: "Jest", img: "jest.svg" },
+  { name: "Git", img: "git.svg" },
 ];
 
 const PROJECTS = [
@@ -22,7 +30,7 @@ const PROJECTS = [
     alt: "Eventora Landing page",
     tags: ["Event Booking", "MongoDB", "Express.js", "React.js", "Node.js"],
     title: "Eventora",
-    body: "A modern event booking platform — browse and book events end to end, with a React (Vite) client and an Express + MongoDB backend.",
+    body: "Browse events, book seats through an OTP-verified checkout, and get a QR-code ticket by email. React (Vite) client on an Express + MongoDB API with JWT auth, rate limiting, and integration tests in Jest and Supertest.",
   },
   {
     href: "https://interviewprep-ai-hazx.onrender.com/",
@@ -30,7 +38,7 @@ const PROJECTS = [
     alt: "Interview-prep-AI Landing page",
     tags: ["AI Platform", "Gemini AI", "MongoDB", "Express.js", "React.js", "Node.js"],
     title: "Interview Prep AI",
-    body: "Paste a job description, upload your resume, and get a match score, tailored questions, skill gaps, and a day-by-day prep roadmap.",
+    body: "Paste a job description, upload your resume, and get a match score, tailored questions, skill gaps, and a day-by-day prep roadmap. Gemini responses are shaped by Zod schemas, behind JWT auth with token blacklisting, rate limiting, and Helmet.",
   },
   {
     href: "https://anchita-biswas.github.io/Blipkart/",
