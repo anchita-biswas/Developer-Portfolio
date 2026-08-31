@@ -6,6 +6,16 @@ const EMAIL = "anchitabiswas08@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;
 const GITHUB = "https://github.com/anchita-biswas";
 const LINKEDIN = "https://www.linkedin.com/in/anchita-biswas-22046a206";
+const RESUME_HTML = "/resume.html";
+const RESUME_PDF = "/Anchita_Biswas_Full_Stack_Developer.pdf";
+
+// Opens the resume page (default anchor behaviour) and starts the PDF download alongside it.
+function downloadResume() {
+  const a = document.createElement("a");
+  a.href = RESUME_PDF;
+  a.download = "";
+  a.click();
+}
 
 // MERN stack first, then fundamentals and styling, then tooling.
 const SKILLS = [
@@ -114,6 +124,14 @@ export default function Home() {
           <a href="#skills">Skills</a>
           <a href="#projects">Work</a>
           <a href="#contact">Contact</a>
+          <a
+            href={RESUME_HTML}
+            target="_blank"
+            rel="noreferrer"
+            onClick={downloadResume}
+          >
+            Resume
+          </a>
           <a href={MAILTO} className="nav-cta">
             Hire me <i className="fa-solid fa-arrow-right"></i>
           </a>
@@ -138,6 +156,17 @@ export default function Home() {
           </a>
           <a href="#contact" onClick={closeMenu}>
             Contact
+          </a>
+          <a
+            href={RESUME_HTML}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => {
+              downloadResume();
+              closeMenu();
+            }}
+          >
+            Resume
           </a>
           <a href={MAILTO} onClick={closeMenu}>
             Hire me

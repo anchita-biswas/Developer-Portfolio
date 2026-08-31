@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anchita Biswas — Full Stack Developer</title>
+<style>
+  :root{
+    --ink:#0b0d10;
+    --ink-soft:#242830;
+    --ink-mute:#5a626d;
+    --accent:#0B57D0;
+    --accent-deep:#07408f;
+    --rule:#0B57D0;
+    --rule-soft:#ccd9f2;
+    --paper:#ffffff;
+    --page-bg:#e9edf3;
+    --sans:Helvetica,"Helvetica Neue",Arial,"Segoe UI",sans-serif;
+    --serif:Garamond,"EB Garamond","Adobe Garamond Pro","Apple Garamond","Times New Roman",Times,serif;
+    --fs-body:10pt;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--page-bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:var(--fs-body);
+    line-height:1.42;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sheet{
+    background:var(--paper);
+    max-width:8.27in;              /* A4 width */
+    margin:24px auto;
+    padding:0.5in 0.55in 0.45in;
+    box-shadow:0 1px 2px rgba(16,24,40,.06),0 12px 32px rgba(16,24,40,.10);
+    border-radius:2px;
+  }
+
+  /* ---------- header ---------- */
+  header{text-align:center;padding-bottom:10px;}
+  h1{
+    font-family:var(--serif);
+    font-size:34pt;                 /* name */
+    line-height:1.05;
+    letter-spacing:.055em;
+    font-weight:700;
+    margin:0 0 5px;
+    color:var(--ink);
+  }
+  .role{
+    font-family:var(--serif);
+    font-size:13pt;
+    letter-spacing:.06em;
+    color:var(--accent);
+    font-weight:700;
+    margin:0 0 9px;
+  }
+  .contact{
+    font-size:9.6pt;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .contact + .contact{margin-top:2px;}
+  .contact .sep{color:var(--rule-soft);padding:0 6px;}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule-soft);}
+  a:hover{color:var(--accent-deep);border-bottom-color:var(--accent);}
+
+  /* ---------- sections ---------- */
+  section{margin-top:13px;}
+  h2{
+    font-family:var(--serif);
+    font-size:13pt;
+    font-weight:700;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0 0 7px;
+    padding-bottom:2px;
+    border-bottom:2px solid var(--rule);
+  }
+  p{margin:0 0 4px;}
+  .summary{color:var(--ink-soft);text-align:justify;hyphens:auto;}
+
+  /* ---------- skills ---------- */
+  .skill{margin:0 0 3px;color:var(--ink-soft);}
+  .skill b{color:var(--accent);font-weight:700;}
+
+  /* ---------- projects & roles ---------- */
+  .entry{margin-bottom:11px;}
+  .entry:last-child{margin-bottom:2px;}
+  .entry-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:2px 14px;
+  }
+  .entry-title{font-family:var(--serif);font-size:13pt;font-weight:700;margin:0;color:var(--ink);letter-spacing:.01em;}
+  .entry-meta{font-size:9.4pt;color:var(--ink-mute);white-space:nowrap;}
+  .stack{
+    font-size:9.4pt;
+    font-style:italic;
+    color:var(--ink-mute);
+    margin:1px 0 1px;
+  }
+  .links{
+    font-size:9.4pt;
+    color:var(--ink-mute);
+    margin:0 0 4px;
+  }
+  .links b{font-weight:700;color:var(--accent);}
+  ul{margin:0;padding-left:0;list-style:none;}
+  li{
+    position:relative;
+    padding-left:13px;
+    margin-bottom:2.5px;
+    color:var(--ink-soft);
+  }
+  li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:.52em;
+    width:4px;height:4px;
+    border-radius:50%;
+    background:var(--accent);
+    opacity:1;
+  }
+
+  /* ---------- compact rows ---------- */
+  .row{margin:0 0 3px;color:var(--ink-soft);}
+  .row b{color:var(--accent);font-weight:700;}
+  .inline-list{color:var(--ink-soft);}
+
+  /* ---------- dark mode: screen only ---------- */
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ink:#f2f5fa;
+      --ink-soft:#ccd4e0;
+      --ink-mute:#98a3b3;
+      --accent:#6EA8FF;
+      --accent-deep:#a8c8ff;
+      --rule:#6EA8FF;
+      --rule-soft:#2f3a4a;
+      --paper:#14171c;
+      --page-bg:#0a0c0f;
+    }
+    :root:not([data-theme="light"]) .sheet{
+      box-shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
+    }
+  }
+
+  /* ---------- print ---------- */
+  @page{size:A4;margin:0.38in 0.45in;}
+  @media print{
+    :root{
+      --ink:#000;--ink-soft:#111;--ink-mute:#333;
+      --accent:#0B57D0;--accent-deep:#07408f;
+      --rule:#0B57D0;--rule-soft:#b9cdee;--paper:#fff;--page-bg:#fff;
+      --fs-body:9pt;
+    }
+    body{background:#fff;line-height:1.2;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .sheet{box-shadow:none;margin:0;padding:0;max-width:none;border-radius:0;}
+    a{border-bottom:none;}
+    h1{font-size:34pt;margin-bottom:2px;}
+    .role{font-size:11.5pt;margin-bottom:5px;}
+    .contact{font-size:9pt;}
+    header{padding-bottom:5px;}
+    section{margin-top:8px;}
+    h2{font-size:11.5pt;margin-bottom:4px;padding-bottom:1px;}
+    .entry{margin-bottom:6px;}
+    .entry-title{font-size:11.5pt;}
+    .stack,.links,.entry-meta{font-size:8.8pt;}
+    li{margin-bottom:1px;}
+    .summary{text-align:left;}
+    .skill{margin-bottom:2px;}
+    section{break-inside:avoid;}
+    .entry{break-inside:avoid;}
+    h2{break-after:avoid;}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header>
+    <h1>ANCHITA BISWAS</h1>
+    <p class="role">Full Stack Developer &nbsp;|&nbsp; React &nbsp;|&nbsp; Node.js &nbsp;|&nbsp; MongoDB</p>
+    <p class="contact">Kolkata, West Bengal<span class="sep">|</span>Open to relocate<span class="sep">|</span>+91 9831914329<span class="sep">|</span><a href="mailto:anchitabiswas02@gmail.com">anchitabiswas02@gmail.com</a></p>
+    <p class="contact"><a href="https://github.com/anchita-biswas">github.com/anchita-biswas</a><span class="sep">|</span><a href="https://www.linkedin.com/in/anchita-biswas-dev">linkedin.com/in/anchita-biswas-dev</a><span class="sep">|</span><a href="https://developer-portfolio-nine-livid.vercel.app/">developer-portfolio-nine-livid.vercel.app</a></p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">Full Stack Developer working with React, Node.js, Express, and MongoDB. Built and deployed three applications. An event booking platform that never double-sells a seat, covered by 49 automated tests. A double-entry ledger API that keeps every transfer accurate and traceable. An AI tool that scores a resume against a job description and returns a prep plan. Seeking an entry-level Full Stack Developer role, open pan-India.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <p class="skill"><b>Programming Languages:</b> JavaScript (ES6+), Java, SQL, HTML5, CSS3</p>
+    <p class="skill"><b>Frontend:</b> React 19, Next.js 16 (App Router), React Router v7, Context API, Vite, Tailwind CSS, Sass/SCSS, Axios, Single-Page Applications (SPA), Responsive Web Design</p>
+    <p class="skill"><b>Backend:</b> Node.js, Express.js, RESTful APIs, JWT Authentication, Role-Based Access Control, bcrypt, Zod Validation, Helmet, Rate Limiting, Multer, CORS, Idempotency Keys, OOP</p>
+    <p class="skill"><b>Databases:</b> MongoDB, Mongoose ODM, ACID Transactions, Aggregation Pipelines, Schema Design, Indexing, SQL</p>
+    <p class="skill"><b>Testing:</b> Jest, Vitest, Supertest, React Testing Library, Integration Testing</p>
+    <p class="skill"><b>Tools:</b> Git, GitHub, Google Gemini API, Puppeteer, Nodemailer, Postman, Render, Vercel</p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">Eventora — Event Booking Platform</h3>
+      </div>
+      <p class="stack">React, Tailwind CSS, Node.js, Express, MongoDB, Jest</p>
+      <p class="links"><a href="https://github.com/anchita-biswas/Eventora">github.com/anchita-biswas/Eventora</a> &nbsp;|&nbsp; <a href="https://eventora-88bu.onrender.com/">eventora-88bu.onrender.com</a></p>
+      <ul>
+        <li>Built an event booking platform with 15 REST endpoints, admin/attendee role-based access, OTP verification, and QR-code tickets.</li>
+        <li>Prevented double-booked seats under concurrent load using atomic conditional seat updates with rollback on failure.</li>
+        <li>Wrote 49 backend tests with Jest and Supertest, plus client tests with Vitest.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">Backend-Ledger — Double-Entry Ledger API</h3>
+      </div>
+      <p class="stack">Node.js, Express, MongoDB, Mongoose, JWT</p>
+      <p class="links">github.com/anchita-biswas/BACKEND-LEDGER-REPO-NAME</p>
+      <ul>
+        <li>Built a double-entry ledger API writing paired DEBIT/CREDIT entries per transfer, with balances computed by MongoDB aggregation.</li>
+        <li>Made transfers all-or-nothing using MongoDB ACID transactions, on an append-only audit trail.</li>
+        <li>Blocked duplicate charges on retries using unique idempotency keys across four transaction states.</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">InterviewPrep-AI — AI Interview Preparation Platform</h3>
+      </div>
+      <p class="stack">React, Node.js, Express, MongoDB, Google Gemini API</p>
+      <p class="links"><a href="https://github.com/anchita-biswas/InterviewPrep-AI">github.com/anchita-biswas/InterviewPrep-AI</a> &nbsp;|&nbsp; <a href="https://interviewprep-ai-hazx.onrender.com">interviewprep-ai-hazx.onrender.com</a></p>
+      <ul>
+        <li>Built an AI tool that scores a PDF resume against a job description and returns 10 questions, skill gaps, and a prep roadmap.</li>
+        <li>Kept AI output reliable using Zod schemas as a structured-output contract for Gemini.</li>
+        <li>Secured 8 REST endpoints with JWT httpOnly cookies, bcrypt, and a token blacklist on logout; deployed as one Node/Express service on Render.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="entry">
+      <div class="entry-head">
+        <h3 class="entry-title">Engineer (Assistant Central Coordinator)</h3>
+        <span class="entry-meta">Mar 2024 — Jul 2025</span>
+      </div>
+      <p class="stack">Lumino Industries Ltd., Kanpur, Uttar Pradesh</p>
+      <ul>
+        <li>Coordinated a Rs. 700 Cr government power distribution project (RDSS) covering 777 feeders across 16 divisions in 6 districts. Tracked execution to 93% completion and 43,698 new connections.</li>
+        <li>Automated multi-district reporting with data reconciliation, cutting report preparation by 2 days per week. Tracked 10,000+ site quality observations and 240 right-of-way escalations with the client (DVVNL) and auditor (WAPCOS).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p class="row"><b>Full Stack Development with AI</b> — PW Skills, Kolkata &nbsp;|&nbsp; Aug 2025 – Present</p>
+    <p class="row"><b>B.Tech, Electrical Engineering</b> — B.P. Poddar Institute of Management and Technology, Kolkata &nbsp;|&nbsp; Jul 2025 &nbsp;|&nbsp; CGPA:&nbsp;8.16&nbsp;/&nbsp;10</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <p class="inline-list">Full-Stack Web Development Bootcamp - Udemy (62 hours) &nbsp;|&nbsp; Decoding Java with DSA - PW Skills &nbsp;|&nbsp; Ethical Hacking - NPTEL</p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p class="inline-list">English, Hindi, Bengali</p>
+  </section>
+
+</main>
+</body>
+</html>
