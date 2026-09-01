@@ -116,7 +116,7 @@ export default function Home() {
           <a href="#projects">Work</a>
           <a href="#contact">Contact</a>
           <a href={RESUME_HTML} target="_blank" rel="noreferrer">
-            Resume
+            Get Resume
           </a>
           <a href={MAILTO} className="nav-cta">
             Hire me <i className="fa-solid fa-arrow-right"></i>
