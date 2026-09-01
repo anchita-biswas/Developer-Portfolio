@@ -149,7 +149,7 @@ export default function Home() {
             rel="noreferrer"
             onClick={closeMenu}
           >
-            Get Resume
+            View Resume
           </a>
           <a href={MAILTO} onClick={closeMenu}>
             Hire me
