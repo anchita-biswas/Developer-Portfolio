@@ -21,7 +21,7 @@
   }
 
   *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  html{-webkit-text-size-adjust:100%;color-scheme:light;}
   body{
     margin:0;
     background:var(--page-bg);
@@ -69,6 +69,23 @@
   .contact .sep{color:var(--rule-soft);padding:0 6px;}
   a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule-soft);}
   a:hover{color:var(--accent-deep);border-bottom-color:var(--accent);}
+
+  /* ---------- download button (screen only) ---------- */
+  .download-wrap{text-align:center;margin-top:22px;}
+  .download-btn{
+    display:inline-block;
+    padding:10px 26px;
+    background:var(--accent);
+    color:#fff;
+    font-family:var(--sans);
+    font-size:10.5pt;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    border:1px solid var(--accent);
+    border-radius:2px;
+  }
+  .download-btn:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff;}
 
   /* ---------- sections ---------- */
   section{margin-top:13px;}
@@ -136,24 +153,6 @@
   .row b{color:var(--accent);font-weight:700;}
   .inline-list{color:var(--ink-soft);}
 
-  /* ---------- dark mode: screen only ---------- */
-  @media (prefers-color-scheme:dark){
-    :root:not([data-theme="light"]){
-      --ink:#f2f5fa;
-      --ink-soft:#ccd4e0;
-      --ink-mute:#98a3b3;
-      --accent:#6EA8FF;
-      --accent-deep:#a8c8ff;
-      --rule:#6EA8FF;
-      --rule-soft:#2f3a4a;
-      --paper:#14171c;
-      --page-bg:#0a0c0f;
-    }
-    :root:not([data-theme="light"]) .sheet{
-      box-shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.45);
-    }
-  }
-
   /* ---------- print ---------- */
   @page{size:A4;margin:0.38in 0.45in;}
   @media print{
@@ -166,6 +165,7 @@
     body{background:#fff;line-height:1.2;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
     .sheet{box-shadow:none;margin:0;padding:0;max-width:none;border-radius:0;}
     a{border-bottom:none;}
+    .download-wrap{display:none;}
     h1{font-size:34pt;margin-bottom:2px;}
     .role{font-size:11.5pt;margin-bottom:5px;}
     .contact{font-size:9pt;}
@@ -282,6 +282,10 @@
     <h2>Languages</h2>
     <p class="inline-list">English, Hindi, Bengali</p>
   </section>
+
+  <div class="download-wrap">
+    <a class="download-btn" href="/Anchita_Biswas_Full_Stack_Developer.pdf" download>Download</a>
+  </div>
 
 </main>
 </body>
