@@ -108,20 +108,9 @@ export default function Home() {
     <>
       {/* NAV */}
       <nav className="nav">
-        <div className="nav-brand">
-          <a href="#" className="nav-logo">
-            AB<span className="nav-dot">.</span>
-          </a>
-          <a
-            href={RESUME}
-            target="_blank"
-            rel="noreferrer"
-            className="nav-resume"
-            aria-label="View resume"
-          >
-            <i className="fa-solid fa-file-lines"></i> Resume
-          </a>
-        </div>
+        <a href="#" className="nav-logo">
+          AB<span className="nav-dot">.</span>
+        </a>
         <div className="nav-links">
           <a href="#skills">Skills</a>
           <a href="#projects">Work</a>
@@ -309,17 +298,6 @@ export default function Home() {
             inbox is always open.
           </p>
 
-          <div className="contact-resume">
-            <a
-              href={RESUME}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-ghost btn-resume"
-            >
-              <i className="fa-solid fa-file-lines"></i> Resume
-            </a>
-          </div>
-
           <div className="contact-grid">
             <div className="contact-left">
               <a
@@ -417,6 +395,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* RESUME CTA — carries the contact background down to the footer */}
+      <div className="resume-cta">
+        <a href={RESUME} download className="btn-ghost btn-resume">
+          <i className="fa-solid fa-download"></i> Download Resume
+        </a>
+      </div>
 
       {/* FOOTER */}
       <footer className="footer">

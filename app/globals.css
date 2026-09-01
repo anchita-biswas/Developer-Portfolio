@@ -33,7 +33,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip;
+  /* hidden, not clip: this makes html a scroll container, which cancels the
+     sticky on .nav so the header scrolls away with the page. Intentional. */
+  overflow-x: hidden;
 }
 
 body {
@@ -42,7 +44,7 @@ body {
   font-family: 'Figtree', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -169,32 +171,6 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-dot { color: var(--accent); }
 
-.nav-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.nav-resume {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-family: 'Outfit', sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--accent-mid);
-  background: var(--accent-light);
-  border: 1px solid var(--accent-border);
-  padding: 6px 15px;
-  border-radius: 50px;
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.18s;
-}
-.nav-resume:hover {
-  background: rgba(61, 111, 245, 0.22);
-  border-color: var(--accent);
-  color: var(--text-strong);
-  transform: translateY(-1px);
-}
 
 .nav-links {
   display: flex;
@@ -735,8 +711,6 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 
-.contact-resume { margin: 6px 0 34px; }
-
 .social-row {
   display: flex;
   align-items: center;
@@ -852,6 +826,14 @@ a { text-decoration: none; color: inherit; }
 /* =============================================================
    FOOTER
    ============================================================= */
+/* Sits between the contact section and the footer, on the same background,
+   so it reads as the tail of that section rather than a band of its own. */
+.resume-cta {
+  background: var(--bg-2);
+  padding: 0 60px 100px;
+  text-align: center;
+}
+
 .footer {
   background: #040609;
   padding: 30px 60px;
@@ -885,7 +867,6 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .nav { padding: 0 24px; }
   .nav-links { display: none; }
-  .nav-brand { gap: 10px; }
   .nav-mobile-btn { display: block; }
 
   .hero { padding: 60px 24px 40px; min-height: unset; }
@@ -902,6 +883,7 @@ a { text-decoration: none; color: inherit; }
   .projects { padding: 0 24px 70px; }
   .projects-inner { padding-top: 70px; }
   .contact { padding: 70px 24px; }
+  .resume-cta { padding: 0 24px 70px; }
   .footer { padding: 24px; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -909,9 +891,6 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 480px) {
-  .nav { padding: 0 16px; }
-  .nav-brand { gap: 8px; }
-  .nav-resume { font-size: 12.5px; padding: 6px 12px; }
 
   .hero-heading { font-size: clamp(40px, 12vw, 56px); }
   .hero-img-wrap { width: 200px; height: 200px; }
