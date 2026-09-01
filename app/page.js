@@ -6,7 +6,7 @@ const EMAIL = "anchitabiswas08@gmail.com";
 const MAILTO = `mailto:${EMAIL}`;
 const GITHUB = "https://github.com/anchita-biswas";
 const LINKEDIN = "https://www.linkedin.com/in/anchita-biswas-22046a206";
-const RESUME_HTML = "/resume.html";
+const RESUME = "/Anchita_Biswas_Full_Stack_Developer.pdf";
 
 // MERN stack first, then fundamentals and styling, then tooling.
 const SKILLS = [
@@ -108,16 +108,24 @@ export default function Home() {
     <>
       {/* NAV */}
       <nav className="nav">
-        <a href="#" className="nav-logo">
-          AB<span className="nav-dot">.</span>
-        </a>
+        <div className="nav-brand">
+          <a href="#" className="nav-logo">
+            AB<span className="nav-dot">.</span>
+          </a>
+          <a
+            href={RESUME}
+            target="_blank"
+            rel="noreferrer"
+            className="nav-resume"
+            aria-label="View resume"
+          >
+            <i className="fa-solid fa-file-lines"></i> Resume
+          </a>
+        </div>
         <div className="nav-links">
           <a href="#skills">Skills</a>
           <a href="#projects">Work</a>
           <a href="#contact">Contact</a>
-          <a href={RESUME_HTML} target="_blank" rel="noreferrer">
-            View Resume
-          </a>
           <a href={MAILTO} className="nav-cta">
             Hire me <i className="fa-solid fa-arrow-right"></i>
           </a>
@@ -142,14 +150,6 @@ export default function Home() {
           </a>
           <a href="#contact" onClick={closeMenu}>
             Contact
-          </a>
-          <a
-            href={RESUME_HTML}
-            target="_blank"
-            rel="noreferrer"
-            onClick={closeMenu}
-          >
-            View Resume
           </a>
           <a href={MAILTO} onClick={closeMenu}>
             Hire me
@@ -182,6 +182,14 @@ export default function Home() {
               </a>
               <a href="#contact" className="btn-ghost">
                 Get in touch
+              </a>
+              <a
+                href={RESUME}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-ghost btn-resume"
+              >
+                <i className="fa-solid fa-file-lines"></i> Resume
               </a>
             </div>
             <div className="hero-socials">
@@ -300,6 +308,17 @@ export default function Home() {
             Whether you have a role, a project, or just want to say hello — my
             inbox is always open.
           </p>
+
+          <div className="contact-resume">
+            <a
+              href={RESUME}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-ghost btn-resume"
+            >
+              <i className="fa-solid fa-file-lines"></i> Resume
+            </a>
+          </div>
 
           <div className="contact-grid">
             <div className="contact-left">

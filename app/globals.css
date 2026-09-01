@@ -33,7 +33,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
   font-family: 'Figtree', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -89,6 +89,15 @@ a { text-decoration: none; color: inherit; }
   color: var(--accent-mid);
   transform: translateY(-2px);
 }
+
+/* Resume CTA — a ghost button, pre-tinted so it stands apart from the
+   plain-text nav items and the neutral "Get in touch". */
+.btn-resume {
+  background: var(--accent-light);
+  border-color: var(--accent-border);
+  color: var(--accent-mid);
+}
+.btn-resume:hover { color: var(--text-strong); }
 
 /* ── SECTION COMMON ── */
 .section-label {
@@ -159,6 +168,33 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: -0.02em;
 }
 .nav-dot { color: var(--accent); }
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent-mid);
+  background: var(--accent-light);
+  border: 1px solid var(--accent-border);
+  padding: 6px 15px;
+  border-radius: 50px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.18s;
+}
+.nav-resume:hover {
+  background: rgba(61, 111, 245, 0.22);
+  border-color: var(--accent);
+  color: var(--text-strong);
+  transform: translateY(-1px);
+}
 
 .nav-links {
   display: flex;
@@ -699,6 +735,8 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 
+.contact-resume { margin: 6px 0 34px; }
+
 .social-row {
   display: flex;
   align-items: center;
@@ -847,6 +885,7 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 900px) {
   .nav { padding: 0 24px; }
   .nav-links { display: none; }
+  .nav-brand { gap: 10px; }
   .nav-mobile-btn { display: block; }
 
   .hero { padding: 60px 24px 40px; min-height: unset; }
@@ -870,6 +909,10 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 480px) {
+  .nav { padding: 0 16px; }
+  .nav-brand { gap: 8px; }
+  .nav-resume { font-size: 12.5px; padding: 6px 12px; }
+
   .hero-heading { font-size: clamp(40px, 12vw, 56px); }
   .hero-img-wrap { width: 200px; height: 200px; }
   .hero-badge { font-size: 11px; padding: 6px 10px; }
